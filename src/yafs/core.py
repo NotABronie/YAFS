@@ -882,7 +882,7 @@ class Sim:
             self.placement_policy[placement.name] = {"placement_policy": placement, "apps": []}
             if placement.activation_dist is not None:
                 self.env.process(self.__add_placement_process(placement))
-        self.placement_policy[placement.name]["apps"].append(app.name)
+            self.placement_policy[placement.name]["apps"].append(app.name)
 
         # Add Population control to the App
 
@@ -890,7 +890,7 @@ class Sim:
             self.population_policy[population.name] = {"population_policy": population, "apps": []}
             if population.activation_dist is not None:
                 self.env.process(self.__add_population_process(population))
-        self.population_policy[population.name]["apps"].append(app.name)
+            self.population_policy[population.name]["apps"].append(app.name)
 
         # Add Selection control to the App
         self.selector_path[app.name] = selector
